@@ -33,6 +33,45 @@
     </label>
     <br><br>
 
+    <!-- Payment button placeholder for Stripe -->
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+<section>
+  <h2>Place Your Order</h2>
+  <form name="alfajores-order" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="alfajores-order">
+
+    <label>
+      Name:
+      <input type="text" name="name" required>
+    </label>
+    <br><br>
+
+    <label>
+      Phone or Email:
+      <input type="text" name="contact" required>
+    </label>
+    <br><br>
+
+    <label>
+      Quantity:
+      <input type="number" name="quantity" min="1" required>
+    </label>
+    <br><br>
+
+    <label>
+      Pickup Date:
+      <input type="date" name="pickup-date" required>
+    </label>
+    <br><br>
+
+    <label>
+      Special Instructions:
+      <textarea name="message"></textarea>
+    </label>
+    <br><br>
+
     <button type="submit" style="background-color:#D91023; color:#fff; border:none; padding:10px 20px; border-radius:8px; font-size:1em; cursor:pointer;">
       Submit Order
     </button>
