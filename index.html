@@ -1,151 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Los Alfajores De Gordin</title>
-  <style>
-    /* Reset some defaults */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      position: relative;
-      background: #D91023;
-      color: #fff;
-      padding: 60px 20px 120px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.3em;
-      font-weight: 300;
-    }
-
-    .hero-image {
-      position: absolute;
-      bottom: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .order {
-      margin: 100px 0 40px 0;
-      text-align: center;
-      font-size: 1.6em;
-      color: #D91023;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-size: 2em;
-      color: #D91023;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .photos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    .photos img {
-      max-width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .photos img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
-
-    .about {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 1.6em;
-    }
-
-    footer {
-      background-color: #D91023;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.95em;
-    }
-
-    @media(max-width: 600px){
-      header h1 {
-        font-size: 2.2em;
-      }
-
-      header p {
-        font-size: 1.1em;
-      }
-
-      .photos img {
-        max-width: 80%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Los Alfajores De Gordin</h1>
-  <p>Authentic Peruvian alfajores made by Justo Rosell</p>
-  <img class="hero-image" src="7CFB23E2-E593-44F2-A37A-97FA37307EC6.png" alt="Alfajores hero">
-</header>
-
-<p class="order">Order via DM or WhatsApp: 786-582-8495</p>
-
 <section>
-  <h2>Our Alfajores</h2>
-  <div class="photos">
-    <img src="7CFB23E2-E593-44F2-A37A-97FA37307EC6.png" alt="Alfajor 1">
-    <img src="7a96bd18-3932-4994-8f9f-af563fbd7fa4.jpeg" alt="Alfajor 2">
-    <img src="52e97469-84ea-42ea-8ca0-f01f906978ae.jpeg" alt="Alfajor 3">
-  </div>
-</section>
+  <h2>Place Your Order</h2>
+  <form name="alfajores-order" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="alfajores-order">
 
-<section class="about">
-  <h2>About Justo</h2>
-  <p>Made with love and family tradition in small batches, Los Alfajores De Gordin brings the authentic taste of Peru to your home. Perfect for gifting or indulging!</p>
+    <label>
+      Name:
+      <input type="text" name="name" required>
+    </label>
+    <br><br>
+
+    <label>
+      Phone or Email:
+      <input type="text" name="contact" required>
+    </label>
+    <br><br>
+
+    <label>
+      Quantity:
+      <input type="number" name="quantity" min="1" required>
+    </label>
+    <br><br>
+
+    <label>
+      Pickup Date:
+      <input type="date" name="pickup-date" required>
+    </label>
+    <br><br>
+
+    <label>
+      Special Instructions:
+      <textarea name="message"></textarea>
+    </label>
+    <br><br>
+
+    <button type="submit" style="background-color:#D91023; color:#fff; border:none; padding:10px 20px; border-radius:8px; font-size:1em; cursor:pointer;">
+      Submit Order
+    </button>
+  </form>
 </section>
 
 <footer>
   &copy; 2026 Los Alfajores De Gordin
 </footer>
-
-</body>
-</html>
